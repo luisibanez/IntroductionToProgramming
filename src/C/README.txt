@@ -16,3 +16,11 @@ Debug with:
 (gdb)  disassemble main
 
 
+Generate Assembly code:
+
+
+           gcc -S HelloWorld.c
+
+Open it:
+
+             gedit  HelloWorld.s

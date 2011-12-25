@@ -48,3 +48,27 @@ Type commands
 (gdb) diassemble _start
 
 
+
+
+as -g  AddForever.s   -o AddForever.o
+ld     AddForever.o   -o AddForever
+
+bless AddForever
+
+gdb AddForever
+
+(gdb) list
+(gdb) disassemble _start
+(gdb) break 6
+(gdb) run
+(gdb) info reg rax
+(gdb) nexti
+(gdb) info reg rax
+(gdb) nexti
+(gdb) info reg rax
+(gdb) nexti
+(gdb) info reg rax
+(gdb) nexti
+
+
+

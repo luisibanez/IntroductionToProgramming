@@ -1,3 +1,53 @@
+
+as -g  AddForever.s   -o AddForever.o
+ld     AddForever.o   -o AddForever
+
+objdump -d AddForever
+
+gdb AddForever
+
+(gdb) list
+(gdb) disassemble _start
+(gdb) break 6
+(gdb) run
+(gdb) info reg rax
+(gdb) nexti
+(gdb) info reg rax
+(gdb) nexti
+(gdb) info reg rax
+(gdb) nexti
+(gdb) info reg rax
+(gdb) nexti
+
+
+
+http://www.c-jump.com/CIS77/reference/Instructions_by_Mnemonic.html
+
+http://www.c-jump.com/CIS77/reference/Instructions_by_Opcode.html
+
+
+-------------------------------------------
+
+
+as -g  SumHours.s   -o SumHours.o
+ld     SumHours.o   -o SumHours
+
+objdump -d SumHours
+
+gdb SumHours
+
+(gdb) list
+(gdb) break 14
+(gdb) run
+(gdb) info reg rdi
+(gdb) nexti
+(gdb) info reg rax
+(gdb) nexti
+
+
+-------------------------------------------
+
+
 Compile the program with
 
    as -g HelloWorld.s -o HelloWorld.o
@@ -46,29 +96,4 @@ Type commands
 (gdb) nexti
 (gdb) i r rip
 (gdb) diassemble _start
-
-
-
-
-as -g  AddForever.s   -o AddForever.o
-ld     AddForever.o   -o AddForever
-
-bless AddForever
-
-gdb AddForever
-
-(gdb) list
-(gdb) disassemble _start
-(gdb) break 6
-(gdb) run
-(gdb) info reg rax
-(gdb) nexti
-(gdb) info reg rax
-(gdb) nexti
-(gdb) info reg rax
-(gdb) nexti
-(gdb) info reg rax
-(gdb) nexti
-
-
 

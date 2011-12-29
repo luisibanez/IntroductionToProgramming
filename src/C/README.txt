@@ -1,16 +1,17 @@
 Compile with:
 
-       gcc -g HelloWorld.c -o HellowWorld
+       gcc -g HelloWorld.c -c -o HelloWorld.o
+
+
+Link with:
+
+       ld     HelloWorld.o    -o HelloWorld
 
 
 Run with:
 
-            ./HelloWorld
+                 ./HelloWorld
 
-
-Debug with:
-
-           gdb -q  ./HelloWorld
 
 
 (gdb)  disassemble main
@@ -24,3 +25,5 @@ Generate Assembly code:
 Open it:
 
              gedit  HelloWorld.s
+
+
